@@ -57,9 +57,7 @@ h2,
 .container {
 	padding: 10px;
 	background: #fff;
-  border-radius: 5px;
 	margin: 45px auto;
-  box-shadow: 0 1.5px 0 0 rgba(0,0,0,0.1);
 }
 .item {
 	color:black ;
@@ -75,7 +73,7 @@ h2,
 .button {
 	color: black;
 	text-align: center;
-  font-size: 0.5em;
+  font-size: 0.75em;
 	padding: .625em 1.25em;
 	background: lightcyan;
 	border-radius: .35em;
