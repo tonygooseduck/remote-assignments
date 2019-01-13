@@ -71,8 +71,6 @@ h2,
   text-align: center;
 }
 
-.item {
-}
 
 .button {
 	color: black;
@@ -117,6 +115,7 @@ h2,
   }
   .item {
     flex-basis: 40%;
+    max-width: 1200px;
   }
 
 }
