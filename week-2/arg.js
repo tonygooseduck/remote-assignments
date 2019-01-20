@@ -9,10 +9,22 @@ function calculate (args) {
   }
   return result;
 }
-var number = {
+//object literal
+var cal1 = {
   op: "+",
   n1: 2,
   n2: 4
 }
-console.log(calculate ({n1: 2, n2: 3, op: "+"}));
-console.log(calculate(number));
+console.log(calculate(cal1));
+
+//class
+class Calculation {
+  constructor (op, n1, n2) {
+    this.op = op;
+    this.n1 = n1;
+    this.n2 = n2;
+  }
+
+}
+var cal2 = new Calculation("-", 3, 1);
+console.log(calculate(cal2));
