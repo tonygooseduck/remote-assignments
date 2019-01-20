@@ -1,0 +1,179 @@
+/* =================================
+  Base Element Styles
+==================================== */
+
+
+* {
+	box-sizing: border-box;
+}
+body {
+	font-size: 1.35em;
+	font-family: 'Varela Round', sans-serif;
+	color: black;
+	background: white;
+	margin: 0;
+}
+
+img {
+	display: block;
+  padding: 20px 20px;
+	width: 100px;
+	height: 100px;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+
+.main-header {
+  background-color: grey;
+}
+.web-title {
+  padding-left: 20px;
+}
+h2,
+.headline
+{
+  text-align: center;
+}
+
+.main-nav li{
+	text-align: center;
+	display: block;
+	padding: 20px 20px;
+}
+
+.banner {
+	color: ;
+	background: lightcyan;
+	padding: 3.2em 0;
+	margin-bottom: 48px;
+}
+
+.container {
+	padding: 10px;
+	background: #fff;
+	margin: 45px auto;
+}
+.item {
+	color:black ;
+	padding: 15px;
+	margin: 5px;
+	background: gray;
+	border-radius: 3px;
+  height : 200px;
+  text-align: center;
+}
+
+
+.button {
+	color: black;
+	text-align: center;
+	font-size: 16px;
+	padding: .625em 1.25em;
+	background: lightcyan;
+	border-radius: .35em;
+  width: 30%;
+	max-width: 200px;
+	height: 3.5em;
+  margin: 0 auto;
+
+}
+
+div.hidden {
+	display: none;
+}
+
+.trigger {
+	position: fixed;
+  top: : 0;
+  right: 0;
+  width: 50%;
+	height: 100%;
+  border: 3px solid black;
+	background-color: white;
+	display: none;
+}
+
+.exit {
+	position: fixed;
+	top:0;
+	right:0;
+}
+.trigger ul li {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 10px;
+}
+
+
+
+/* =================================
+  Flexbox
+==================================== */
+
+/* =================================
+  Media Queries
+==================================== */
+@media (min-width: 0px) {
+  .main-nav li{
+    display: none;
+  }
+
+  .main-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+
+}
+@media (min-width: 500px) {
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .item {
+    flex-basis: 40%;
+
+  }
+
+}
+
+@media (min-width: 800px){
+  img.menu {
+    display: none;
+  }
+  .main-header,
+  .main-nav,
+  .main-nav li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .main-nav li {
+    margin: auto;
+  }
+}
+
+@media (min-width: 1200px){
+  .item {
+    max-width: 600px;
+		flex-basis: 40%;
+  }
+
+	.container {
+		max-width: 1300px;
+		display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+	}
+}
