@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+    (function() {
+      var httpRequest;
+      document.querySelector("button").addEventListener('click', makeRequest);
+      function makeRequest () {
+      httpRequest = new XMLHttpRequest();
+      httpRequest.onreadystatechange = function () {
+        if (httpRequest.readyState === 4) {
+          document.querySelector("h2").innerHTML = httpRequest.responseText;
+        }
+      };
+      httpRequest.open('GET', 'http://localhost:3000/getData?number=10');
+      httpRequest.send();
+    }
+  })();
+    </script>
+  </head>
+  <body>
+    <h1>Ajax </h1>
+    <h2></h2>
+    <form action="/getData", method= "get">
+      <label>Please enter an integer </label>
+      <input type="text", name="number" id="number">
+      <button type="submit"> Submit </button>
+  </body>
+</html>
