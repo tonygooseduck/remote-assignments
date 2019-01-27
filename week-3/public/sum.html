@@ -2,11 +2,7 @@
 <html lang="en">
   <head>
     <script>
-    (function() {
-      var httpRequest;
-      document.querySelector("button").addEventListener('click', makeRequest);
-      function makeRequest () {
-      httpRequest = new XMLHttpRequest();
+      const httpRequest = new XMLHttpRequest();
       httpRequest.onreadystatechange = function () {
         if (httpRequest.readyState === 4) {
           document.querySelector("h2").innerHTML = httpRequest.responseText;
@@ -14,16 +10,29 @@
       };
       httpRequest.open('GET', 'http://localhost:3000/getData?number=10');
       httpRequest.send();
-    }
-  })();
+
+      function makeRequest () {
+        const xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState === 4) {
+            document.querySelector("h2").innerHTML = xhr.responseText;
+          }
+        };
+        const number = document.querySelector("#number").value;
+        xhr.open('GET', 'http://localhost:3000/getData?number=' + `${number}`);
+        xhr.send();
+      }
     </script>
   </head>
   <body>
     <h1>Ajax </h1>
     <h2></h2>
-    <form action="/getData", method= "get">
       <label>Please enter an integer </label>
       <input type="text", name="number" id="number">
       <button type="submit"> Submit </button>
+
+      <script>
+        document.querySelector("button").addEventListener('click', makeRequest);
+      </script>
   </body>
 </html>
