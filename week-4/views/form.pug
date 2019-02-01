@@ -1,0 +1,16 @@
+html
+  head
+    title= title
+  body
+    form(action='/signin', method='post')
+      label Sign in here:
+        input(type='text', name='email')
+        input(type='text', name='password')
+      button(type='submit') Sign in
+    form(action='/signup', method='post')
+      label Sign up here:
+        input(type='text', name='email')
+        input(type='text', name='password')
+      button(type='submit') Sign up
+    header
+    footer
